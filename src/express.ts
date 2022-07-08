@@ -17,7 +17,7 @@ const handle = async (event: any) => {
             actions: [
               {
                 type: 'Action.Submit',
-                title: 'Open Dialog',
+                title: 'Open dialog',
                 data: {
                   path: 'open-dialog',
                 },
@@ -31,23 +31,25 @@ const handle = async (event: any) => {
     return {
       type: 'dialog',
       dialog: {
-        title: 'I opened a dialog',
-        size: 'small',
-        iconUrl: 'https://somedomain.com/icon.png',
-        card: {
-          type: 'AdaptiveCard',
-          version: '1.3',
-          $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
-          body: [
-            {
-              type: 'TextBlock',
-              text: 'Hello.',
-              wrap: true,
-              size: 'ExtraLarge',
-              weight: 'Bolder',
-            },
-          ],
-        },
+        title: 'Dialog',
+        size: 'large',
+        iconUrl:
+          'https://www.kindpng.com/picc/m/255-2554719_a-generic-square-placeholder-image-with-rounded-corners.png',
+        iframeUrl: 'https://www.ringcentral.com',
+        // card: {
+        //   type: 'AdaptiveCard',
+        //   version: '1.3',
+        //   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+        //   body: [
+        //     {
+        //       type: 'TextBlock',
+        //       text: 'Hello.',
+        //       wrap: true,
+        //       size: 'ExtraLarge',
+        //       weight: 'Bolder',
+        //     },
+        //   ],
+        // },
       },
     };
   }
