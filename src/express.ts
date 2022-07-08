@@ -27,7 +27,31 @@ const handle = async (event: any) => {
         ],
       });
     }
+  } else if (type === 'UserSubmit') {
+    return {
+      type: 'dialog',
+      dialog: {
+        title: 'I opened a dialog',
+        size: 'small',
+        iconUrl: 'https://somedomain.com/icon.png',
+        card: {
+          type: 'AdaptiveCard',
+          version: '1.3',
+          $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+          body: [
+            {
+              type: 'TextBlock',
+              text: 'Hello.',
+              wrap: true,
+              size: 'ExtraLarge',
+              weight: 'Bolder',
+            },
+          ],
+        },
+      },
+    };
   }
+  return undefined;
 };
 const app = createApp(handle);
 app.listen(process.env.RINGCENTRAL_CHATBOT_EXPRESS_PORT);
