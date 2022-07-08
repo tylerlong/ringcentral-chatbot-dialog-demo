@@ -35,21 +35,21 @@ const handle = async (event: any) => {
         size: 'large',
         iconUrl:
           'https://www.kindpng.com/picc/m/255-2554719_a-generic-square-placeholder-image-with-rounded-corners.png',
-        iframeUrl: 'https://www.ringcentral.com',
-        // card: {
-        //   type: 'AdaptiveCard',
-        //   version: '1.3',
-        //   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
-        //   body: [
-        //     {
-        //       type: 'TextBlock',
-        //       text: 'Hello.',
-        //       wrap: true,
-        //       size: 'ExtraLarge',
-        //       weight: 'Bolder',
-        //     },
-        //   ],
-        // },
+        // iframeUrl: 'https://www.ringcentral.com',
+        card: {
+          type: 'AdaptiveCard',
+          version: '1.3',
+          $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+          body: [
+            {
+              type: 'TextBlock',
+              text: 'Hello.',
+              wrap: true,
+              size: 'ExtraLarge',
+              weight: 'Bolder',
+            },
+          ],
+        },
       },
     };
   }
