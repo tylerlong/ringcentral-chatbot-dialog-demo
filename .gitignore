@@ -2,3 +2,5 @@ build/
 node_modules/
 .env
 .env.yml
+*.sqlite
+.secret
